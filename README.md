@@ -1,6 +1,6 @@
 # DailyFit
 
-App nativa per palestra e nutrizione. **Il codice è stato generato con l'aiuto di ChatGPT 6.1Sol e la revisione di GPT6 Astra**, attraverso un processo di richieste, prove e correzioni. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
+App nativa per palestra e nutrizione. **Il codice è stato generato con l'aiuto di ChatGPT 6.1 Sol e la revisione di GPT6 Astra**, attraverso un processo di richieste, prove e correzioni. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
 
 ## Funzionalità
 
