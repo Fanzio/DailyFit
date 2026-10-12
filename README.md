@@ -65,6 +65,19 @@ Per iOS sono stati verificati struttura del progetto, schema, riferimenti, risor
 
 I metadati dell’archivio rimangono in memoria; backup e ripristino elaborano l’intero archivio. Non sono presenti paginazione completa o test grafici automatici. Le misure di consumo e latenza richiedono prove sui telefoni.
 
-## Sviluppo assistito dall’AI
+## Caso studio: dall’idea alle app con l’AI
 
-L’AI è stata utilizzata per prototipazione, implementazione, revisione e test. Requisiti, scelte funzionali e riscontri sul funzionamento sono stati guidati dall’utente. La verifica distingue il codice scritto dai controlli realmente eseguiti.
+Il progetto nasce dall’esigenza di organizzare allenamenti e alimentazione in un’app personale, semplice da consultare e utilizzabile offline. Lo sviluppo è avvenuto attraverso un dialogo iterativo: definizione dei requisiti, prototipo HTML del design, implementazione nativa iOS, versione Android, prove e correzioni.
+
+**Ruolo dell’autore del progetto:** ideazione, definizione delle funzionalità, scelta dei flussi e del design, selezione dei contenuti iniziali e prove manuali su simulatore e dispositivi. I riscontri d’uso hanno guidato le modifiche successive.
+
+**Contributo dell’AI:** supporto alla progettazione tecnica, generazione dei sorgenti delle due app, scrittura dei test automatici, analisi degli errori e revisione di prestazioni e gestione dei dati. Il codice generato è stato verificato con compilazioni, test e riscontri manuali; lo stato delle verifiche della versione pubblicata è indicato sopra.
+
+Alcuni passaggi del lavoro:
+
+- Separazione della dieta settimanale base dalle modifiche effettuate per una singola data.
+- Semplificazione del diario ad appunti liberi, dopo aver valutato una soluzione con progressioni automatiche.
+- Passaggio dai salvataggi dell’intero archivio ad aggiornamenti incrementali e foto caricate su richiesta.
+- Correzione dei problemi emersi durante le prove: layout dell’editor Android, compatibilità degli archivi e apertura dell’app ChatGPT.
+
+Questo repository documenta il risultato dello sviluppo assistito dall’AI e le scelte dell’autore. La cronologia Git parte dal caricamento su GitHub: non ricostruisce le iterazioni precedenti. Il progetto è presentato con le verifiche eseguite e i limiti rimasti, senza attribuire ai test automatici una copertura dell’intera interfaccia o di ogni dispositivo.
