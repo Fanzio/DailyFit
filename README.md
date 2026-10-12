@@ -2,7 +2,7 @@
 
 DailyFit is a workout and nutrition app with two independent native implementations: **SwiftUI for iOS** and **Java for Android**. Its main features work offline, with no account or synchronization. The interface uses a dark theme with lime-green accents and is currently **in Italian**.
 
-**Code was generated with ChatGPT6.1 Sol and reviewed with GPT6 Astra.**
+**Code was generated with ChatGPT 6.1 Sol and reviewed with GPT 6 Astra.**
 
 ## Features
 
