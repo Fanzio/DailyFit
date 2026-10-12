@@ -1,6 +1,6 @@
 # DailyFit
 
-App nativa per palestra e nutrizione, ideata e guidata da **Luca Venceslai**. **Tutto il codice è stato generato tramite ChatGPT**, attraverso un processo iterativo di richieste, prove e correzioni. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
+App nativa per palestra e nutrizione. **Il codice è stato generato con l'aiuto di ChatGPT 6.1Sol e la revisione di GPT6 Astra**, attraverso un processo di richieste, prove e correzioni. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
 
 ## Funzionalità
 
@@ -69,25 +69,13 @@ I metadati dell’archivio rimangono in memoria; backup e ripristino elaborano l
 
 Il progetto nasce dall’esigenza di organizzare allenamenti e alimentazione in un’app personale, semplice da consultare e utilizzabile offline. Lo sviluppo è avvenuto attraverso un dialogo iterativo: definizione dei requisiti, prototipo HTML del design, implementazione nativa iOS, versione Android, prove e correzioni.
 
-**Ruolo di Luca Venceslai ([Fanzio su GitHub](https://github.com/Fanzio)):** ideazione, definizione dei requisiti e delle funzionalità, scelta dei flussi e del design, selezione dei contenuti iniziali e prove manuali su simulatore e dispositivi. I riscontri d’uso hanno guidato le modifiche successive. Il progetto non viene presentato come codice scritto manualmente dall’autore.
+## Crediti e licenza
 
-**Contributo di ChatGPT:** generazione dell’intero codice delle app iOS e Android, del prototipo HTML e dei test automatici; supporto alla progettazione tecnica, analisi degli errori, revisione delle prestazioni e preparazione della documentazione. Il codice generato è stato sottoposto alle compilazioni, ai test e alle prove indicati nella sezione Verifiche; scrittura del codice e verifica del suo funzionamento sono distinte.
+DailyFit è un progetto ideato e guidato da Luca Venceslai.
+Il codice delle app iOS e Android, il prototipo e i test automatici sono stati generati con l'aiuto di ChatGPT 6.1 Sol.
+Anche le immagini degli esercizi e l’icona sono state generate con AI.
 
-Alcuni passaggi del lavoro:
-
-- Separazione della dieta settimanale base dalle modifiche effettuate per una singola data.
-- Semplificazione del diario ad appunti liberi, dopo aver valutato una soluzione con progressioni automatiche.
-- Passaggio dai salvataggi dell’intero archivio ad aggiornamenti incrementali e foto caricate su richiesta.
-- Correzione dei problemi emersi durante le prove: layout dell’editor Android, compatibilità degli archivi e apertura dell’app ChatGPT.
-
-Questo repository documenta il risultato dello sviluppo assistito dall’AI e le scelte dell’autore. La cronologia Git parte dal caricamento su GitHub: non ricostruisce le iterazioni precedenti. Il progetto è presentato con le verifiche eseguite e i limiti rimasti, senza attribuire ai test automatici una copertura dell’intera interfaccia o di ogni dispositivo.
-
-## Risorse grafiche
-
-Le immagini degli esercizi sono state generate con **ChatGPT**, come indicato dall’autore del progetto. Anche l’icona è stata generata con AI durante lo sviluppo. Le risorse grafiche necessarie all’app sono incluse nei rispettivi progetti nativi.
-
-## Licenza
-
-Il progetto è distribuito con [licenza MIT](LICENSE).
+Il progetto è distribuito con licenza MIT.
+Consulta il file [LICENSE](LICENSE) per maggiori informazioni.
 
 Copyright (c) 2026 Luca Venceslai.
