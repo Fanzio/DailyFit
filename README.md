@@ -1,6 +1,6 @@
 # DailyFit
 
-App nativa per palestra e nutrizione, sviluppata con l’assistenza dell’AI. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
+App nativa per palestra e nutrizione, ideata e guidata da **Luca Venceslai**. **Tutto il codice è stato generato tramite ChatGPT**, attraverso un processo iterativo di richieste, prove e correzioni. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
 
 ## Funzionalità
 
@@ -69,9 +69,9 @@ I metadati dell’archivio rimangono in memoria; backup e ripristino elaborano l
 
 Il progetto nasce dall’esigenza di organizzare allenamenti e alimentazione in un’app personale, semplice da consultare e utilizzabile offline. Lo sviluppo è avvenuto attraverso un dialogo iterativo: definizione dei requisiti, prototipo HTML del design, implementazione nativa iOS, versione Android, prove e correzioni.
 
-**Ruolo dell’autore del progetto:** ideazione, definizione delle funzionalità, scelta dei flussi e del design, selezione dei contenuti iniziali e prove manuali su simulatore e dispositivi. I riscontri d’uso hanno guidato le modifiche successive.
+**Ruolo di Luca Venceslai ([Fanzio su GitHub](https://github.com/Fanzio)):** ideazione, definizione dei requisiti e delle funzionalità, scelta dei flussi e del design, selezione dei contenuti iniziali e prove manuali su simulatore e dispositivi. I riscontri d’uso hanno guidato le modifiche successive. Il progetto non viene presentato come codice scritto manualmente dall’autore.
 
-**Contributo dell’AI:** supporto alla progettazione tecnica, generazione dei sorgenti delle due app, scrittura dei test automatici, analisi degli errori e revisione di prestazioni e gestione dei dati. Il codice generato è stato verificato con compilazioni, test e riscontri manuali; lo stato delle verifiche della versione pubblicata è indicato sopra.
+**Contributo di ChatGPT:** generazione dell’intero codice delle app iOS e Android, del prototipo HTML e dei test automatici; supporto alla progettazione tecnica, analisi degli errori, revisione delle prestazioni e preparazione della documentazione. Il codice generato è stato sottoposto alle compilazioni, ai test e alle prove indicati nella sezione Verifiche; scrittura del codice e verifica del suo funzionamento sono distinte.
 
 Alcuni passaggi del lavoro:
 
@@ -81,3 +81,13 @@ Alcuni passaggi del lavoro:
 - Correzione dei problemi emersi durante le prove: layout dell’editor Android, compatibilità degli archivi e apertura dell’app ChatGPT.
 
 Questo repository documenta il risultato dello sviluppo assistito dall’AI e le scelte dell’autore. La cronologia Git parte dal caricamento su GitHub: non ricostruisce le iterazioni precedenti. Il progetto è presentato con le verifiche eseguite e i limiti rimasti, senza attribuire ai test automatici una copertura dell’intera interfaccia o di ogni dispositivo.
+
+## Risorse grafiche
+
+Le immagini degli esercizi sono state generate con **ChatGPT**, come indicato dall’autore del progetto. Anche l’icona è stata generata con AI durante lo sviluppo. Le risorse grafiche necessarie all’app sono incluse nei rispettivi progetti nativi.
+
+## Licenza
+
+Il progetto è distribuito con [licenza MIT](LICENSE).
+
+Copyright (c) 2026 Luca Venceslai.
