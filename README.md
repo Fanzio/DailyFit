@@ -1,81 +1,100 @@
 # DailyFit
 
-App nativa per palestra e nutrizione. **Il codice è stato generato con l'aiuto di ChatGPT 6.1 Sol e la revisione di GPT6 Astra**, attraverso un processo di richieste, prove e correzioni. Due implementazioni indipendenti: **SwiftUI per iOS** e **Java per Android**. Interfaccia scura e verde lime; funzioni principali offline, senza account o sincronizzazione.
+DailyFit is a workout and nutrition app with two independent native implementations: **SwiftUI for iOS** and **Java for Android**. Its main features work offline, with no account or synchronization. The interface uses a dark theme with lime-green accents and is currently **in Italian**.
 
-## Funzionalità
+**Code was generated with ChatGPT6.1 Sol and reviewed with GPT6 Astra.**
 
-- Schede di allenamento con più giornate, esercizi e serie personalizzate: ripetizioni, intervalli, durata, carico e recupero.
-- Catalogo esercizi con immagini locali, descrizione, gruppo muscolare e link video; diario con appunti liberi.
-- Un timer di recupero alla volta, con pausa/ripresa e avviso alla scadenza.
-- Dieta settimanale base e modifiche per singola data indipendenti; pasti espandibili e spuntini facoltativi.
-- Alimenti per 100 g, calcolo di kcal e macro, obiettivi liberi e lista della spesa.
-- Backup JSON, ripristino ed esportazione Excel per la consultazione anche in Google Fogli.
-- Collegamento esterno a ChatGPT, senza invio automatico dei dati dell’app.
+## Features
 
-Al primo avvio sono inclusi 15 esercizi con 30 immagini, una scheda di quattro giorni e 6 alimenti modificabili. Carichi, recuperi, dieta e obiettivi vanno personalizzati.
+- Workout plans organized by training day, with configurable exercises and sets: repetitions, ranges, duration, weight and rest time.
+- Exercise catalog with images, instructions, muscle groups and video links.
+- Rest timer with start, pause, resume and completion alerts. Only one timer can run at a time.
+- Free-form training notes.
+- A recurring weekly meal plan, with changes for individual dates that leave the base plan untouched.
+- Expandable meals, optional snacks and a food catalog with nutritional values per 100 g.
+- Calorie and macronutrient totals, customizable targets and a shopping list.
+- JSON backup and restore, plus Excel export for viewing in Excel or Google Sheets.
+- A shortcut to ChatGPT, without automatically sharing app data.
 
-## Struttura
+A new installation includes 15 exercises with 30 images, a four-day workout plan and 6 foods. Weights, rest times, meals and targets can be adjusted to suit the user.
+
+## Repository structure
 
 ```text
 DailyFit/
-├── iOS/         Progetto Xcode, sorgenti, risorse e XCTest
-├── android/     Progetto Gradle, sorgenti, risorse e test JUnit
+├── iOS/         Xcode project, source code, assets and XCTest tests
+├── android/     Gradle project, source code, assets and JUnit tests
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
-Le icone e le immagini necessarie sono già all’interno dei progetti. I test sono inclusi nei sorgenti, ma non nelle app distribuite.
+Images and icons are bundled with each native project. Tests are included in the source code but are not shipped in the apps.
 
-## Avviare su iPhone
+## Run on iPhone
 
-Richiede un Mac con Xcode e supporto a iOS 17 o successivo.
+Requires a Mac with Xcode and a simulator or device running iOS 17 or later.
 
-1. Apri `iOS/DailyFit.xcodeproj` in Xcode.
-2. Seleziona lo schema **DailyFit** e un simulatore iPhone.
-3. Premi **⌘U** per i test e **⌘R** per avviare l’app.
-4. Per un iPhone reale, configura il tuo Team in **Signing & Capabilities**, collega il telefono e selezionalo come destinazione. Abilita Modalità sviluppatore se richiesta.
+1. Open `iOS/DailyFit.xcodeproj` in Xcode.
+2. Select the **DailyFit** scheme and an iPhone simulator.
+3. Press **⌘U** to run the tests or **⌘R** to launch the app.
+4. To run on a physical iPhone, select your Team under **Signing & Capabilities**, connect the device and select it as the destination. Enable Developer Mode if prompted.
 
-Bundle Identifier: `it.dailyfit.app`. Un identificativo personalizzato può essere necessario per la firma con il proprio account.
+The bundle identifier is `it.dailyfit.app`. You may need to choose a unique identifier when signing with your own account.
 
-## Avviare su Android
+## Run on Android
 
-Richiede Android Studio, Android SDK 36 e JDK 17 compatibile con il progetto. Il wrapper Gradle è incluso. Destinazione minima: Android 8.0 (API 26).
+Requires Android Studio, Android SDK 36 and a compatible JDK 17 installation. The Gradle wrapper is included. The app supports Android 8.0 (API 26) and later.
 
-1. Apri in Android Studio la cartella `android`, non la sola sottocartella `app`.
-2. Completa la sincronizzazione Gradle e seleziona un emulatore o telefono.
-3. Avvia il modulo **app** con Run.
-4. Per compilare ed eseguire i test dal terminale del progetto:
+1. Open the `android` directory in Android Studio.
+2. Complete Gradle synchronization and select an emulator or device.
+3. Run the **app** module.
 
-   - Windows: `.\gradlew.bat testDebugUnitTest assembleDebug`
-   - macOS/Linux: `chmod +x gradlew`, poi `./gradlew testDebugUnitTest assembleDebug`
+To run the unit tests and build the debug APK, open a terminal in the `android` directory and execute:
 
-Application ID: `it.dailyfit.app`. L’APK debug Gradle viene scritto in `app/build/outputs/apk/debug/app-debug.apk`.
+**Windows**
 
-## Dati e architettura
+```powershell
+.\gradlew.bat testDebugUnitTest assembleDebug
+```
 
-Interfaccia, regole di dominio e archivio sono separati. I salvataggi usano SQLite con aggiornamenti incrementali; le foto sono conservate in file privati e caricate su richiesta. I timer calcolano il tempo dalla scadenza e usano gli avvisi di sistema, senza lavoro continuo in background.
+**macOS/Linux**
 
-I dati restano nel contenitore locale dell’app. Video e ChatGPT possono richiedere Internet. Le esportazioni manuali sono copie condivise volontariamente dall’utente; non esiste sincronizzazione automatica. DailyFit usa un contenitore separato dalle precedenti installazioni con un altro identificativo.
+```sh
+chmod +x gradlew
+./gradlew testDebugUnitTest assembleDebug
+```
 
-## Verifiche
+The application ID is `it.dailyfit.app`. The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
-Versione 1.4.0: su Windows sono stati compilati i sorgenti Android con SDK 36, generati APK debug/release e superati **125 test JUnit**. La verifica è stata eseguita tramite strumenti SDK diretti; il percorso Gradle/Android Studio non è stato eseguito in quella verifica.
+## Data and architecture
 
-Per iOS sono stati verificati struttura del progetto, schema, riferimenti, risorse e **114 dichiarazioni XCTest**. La compilazione Swift e l’esecuzione dei test di questa versione devono essere effettuate sul Mac. I controlli strutturali non sostituiscono la compilazione o il collaudo sui dispositivi.
+The code separates the interface, domain rules and persistence. SQLite saves changes through incremental updates. Photos are stored in private files and loaded when needed.
 
-I metadati dell’archivio rimangono in memoria; backup e ripristino elaborano l’intero archivio. Non sono presenti paginazione completa o test grafici automatici. Le misure di consumo e latenza richiedono prove sui telefoni.
+The rest timer calculates the remaining time from its deadline and uses system alerts, avoiding continuous background work.
 
-## Caso studio: dall’idea alle app con l’AI
+Data stays on the device. Videos and ChatGPT may require an Internet connection. Backups and exports are created on request and can be shared manually.
 
-Il progetto nasce dall’esigenza di organizzare allenamenti e alimentazione in un’app personale, semplice da consultare e utilizzabile offline. Lo sviluppo è avvenuto attraverso un dialogo iterativo: definizione dei requisiti, prototipo HTML del design, implementazione nativa iOS, versione Android, prove e correzioni.
+## Verification
 
-## Crediti e licenza
+For **version 1.4.0**, the Android sources were compiled on Windows against SDK 36, Debug and Release APKs were generated, and **125 JUnit tests passed**. These checks used the SDK tools directly; the Gradle and Android Studio build workflow was not run in that verification session.
 
-DailyFit è un progetto ideato e guidato da Luca Venceslai.
-Il codice delle app iOS e Android, il prototipo e i test automatici sono stati generati con l'aiuto di ChatGPT 6.1 Sol.
-Anche le immagini degli esercizi e l’icona sono state generate con AI.
+For iOS, the Xcode project, scheme, file references and assets were checked. The project contains **114 XCTest tests**. Swift compilation and test execution for this version still need to be completed on a Mac.
 
-Il progetto è distribuito con licenza MIT.
-Consulta il file [LICENSE](LICENSE) per maggiori informazioni.
+These checks do not replace testing the interface, notifications and app behavior on physical devices.
+
+Archive metadata remains in memory, and backup and restore process the full dataset. Full pagination and automated UI tests are not implemented. Battery use and response times need to be measured on phones.
+
+## Case study: from an idea to native apps with AI
+
+DailyFit started as a personal project to manage workouts and nutrition. Development began with the feature requirements and an HTML prototype to explore the design. The iOS and Android versions followed, with changes driven by testing and issues found during use.
+
+## Credits and license
+
+DailyFit was created by Luca Venceslai.
+
+The iOS and Android code, prototype and automated tests were generated with ChatGPT 6.1 Sol. GPT6 Astra was used for code review. The exercise images and app icon were also generated with AI.
+
+DailyFit is released under the MIT license. See [LICENSE](LICENSE) for details.
 
 Copyright (c) 2026 Luca Venceslai.
