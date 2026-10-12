@@ -1,0 +1,29 @@
+# Local tools and snapshots
+.android-tools/
+.checkpoints/
+# Native build output and personal IDE state
+**/build/
+**/.gradle/
+**/.idea/
+**/xcuserdata/
+*.xcuserstate
+local.properties
+.DS_Store
+Thumbs.db
+# Credentials and private signing material
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+*.mobileprovision
+# Generated release downloads (keep source and Gradle wrapper)
+/DailyFit-*.apk
+/DailyFit-*.zip
+/DailyFit-*-SHA256.txt
+# Python caches
+__pycache__/
+*.pyc
+
+# Browser upload staging copy
+/GitHub-upload/
